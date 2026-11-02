@@ -35,3 +35,16 @@ let produitsChers = catalogue.filter(function(p) {
 
 console.log("Produits dont le prix dépasse la moyenne :");
 console.log(produitsChers);
+
+
+let totalArticles = catalogue.reduce(function(total, p) {
+    return total + p.quantite;
+}, 0);
+
+let valeurGlobale = catalogue.reduce(function(total, p) {
+    return total + (p.prix * p.quantite);
+}, 0);
+
+console.log("Nombre total d'articles : " + totalArticles);
+console.log("Valeur globale du stock : " + valeurGlobale);
+
