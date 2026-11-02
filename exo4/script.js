@@ -26,3 +26,12 @@ let sommePrix = catalogue.reduce(function(somme, p) {
 let moyenne = sommePrix / catalogue.length;
 
 console.log("Prix moyen : " + moyenne);
+
+
+
+let produitsChers = catalogue.filter(function(p) {
+    return p.prix > moyenne;
+});
+
+console.log("Produits dont le prix dépasse la moyenne :");
+console.log(produitsChers);
