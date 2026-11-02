@@ -8,3 +8,21 @@ let produit = {
 let valeurStock = produit.prix * produit.quantite;
 
 console.log("valeur du stock de " + produit.nom + " : " + valeurStock);
+
+
+let catalogue = [
+    { nom: "Mascara", prix: 5, quantite: 50 },
+    { nom: "Eyeliner", prix: 15, quantite: 25 },
+    { nom: "Blush", prix: 10, quantite: 50 },
+    { nom: "Gloss", prix: 10, quantite: 30 },
+    { nom: "Concealer", prix: 15, quantite: 50 }
+];
+
+
+let sommePrix = catalogue.reduce(function(somme, p) {
+    return somme + p.prix;
+}, 0);
+
+let moyenne = sommePrix / catalogue.length;
+
+console.log("Prix moyen : " + moyenne);
