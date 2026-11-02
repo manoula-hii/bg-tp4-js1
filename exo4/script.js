@@ -48,3 +48,11 @@ let valeurGlobale = catalogue.reduce(function(total, p) {
 console.log("Nombre total d'articles : " + totalArticles);
 console.log("Valeur globale du stock : " + valeurGlobale);
 
+
+function calculerStock(produit) {
+    return produit.prix * produit.quantite;
+}
+
+console.log("Stock Mascara : " + calculerStock(catalogue[0]));
+console.log("Stock Eyeliner : " + calculerStock(catalogue[1]));
+console.log("Stock Blush : " + calculerStock(catalogue[2]));
